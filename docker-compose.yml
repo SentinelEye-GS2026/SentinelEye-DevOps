@@ -63,7 +63,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ASPNETCORE_URLS: http://+:8080
-      ConnectionStrings__OracleConnection: "User Id=sentineluser;Password=SentinelUser@2026;Data Source=oracle-db-rm565269:1521/SENTINELDB"
+      ConnectionStrings__OracleConnection: "User Id=sentineluser;Password=Sentinel2026;Data Source=oracle-db-rm565269:1521/FREEPDB1"
 
     # ✅ Porta exposta para acesso externo (requisito obrigatório)
     ports:
