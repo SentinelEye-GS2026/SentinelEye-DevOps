@@ -1,0 +1,690 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SentinelEye</name>
+    </assembly>
+    <members>
+        <member name="M:SentinelEye.Controllers.AgentesController.Get">
+            <summary>
+            Lista todos os agentes.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AgentesController.GetById(System.Int32)">
+            <summary>
+            Busca um agente pelo ID.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AgentesController.GetPorRegiao(System.Int32)">
+            <summary>
+            Lista agentes por região.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AgentesController.Post(SentinelEye.DTOs.AgenteDTO.CriacaoAgenteDto)">
+            <summary>
+            Cadastra um novo agente.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AgentesController.Put(System.Int32,SentinelEye.DTOs.AgenteDTO.AtualizacaoAgenteDto)">
+            <summary>
+            Atualiza um agente.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AgentesController.Delete(System.Int32)">
+            <summary>
+            Remove um agente.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AlertasController.Get">
+            <summary>
+            Lista todos os alertas.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AlertasController.GetById(System.Int32)">
+            <summary>
+            Busca um alerta pelo ID.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AlertasController.GetPorRisco(System.String)">
+            <summary>
+            Lista alertas por nível de risco.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AlertasController.Post(SentinelEye.DTOs.AlertaDTO.CriacaoAlertaDto)">
+            <summary>
+            Cadastra um novo alerta.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AlertasController.Put(System.Int32,SentinelEye.DTOs.AlertaDTO.AtualizacaoAlertaDto)">
+            <summary>
+            Atualiza um alerta.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.AlertasController.Delete(System.Int32)">
+            <summary>
+            Remove um alerta.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.ImagensSateliteController.Get">
+            <summary>
+            Lista todas as imagens satélite.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.ImagensSateliteController.GetById(System.Int32)">
+            <summary>
+            Busca uma imagem pelo ID.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.ImagensSateliteController.GetPorOcorrencia(System.Int32)">
+            <summary>
+            Lista imagens por ocorrência.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.ImagensSateliteController.Post(SentinelEye.DTOs.ImagemSateliteDTO.CriacaoImagemDto)">
+            <summary>
+            Cadastra uma nova imagem satélite.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.ImagensSateliteController.Put(System.Int32,SentinelEye.DTOs.ImagemSateliteDTO.AtualizacaoImagemDto)">
+            <summary>
+            Atualiza uma imagem satélite.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.ImagensSateliteController.Delete(System.Int32)">
+            <summary>
+            Remove uma imagem satélite.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.OcorrenciasController.Get">
+            <summary>
+            Lista todas as ocorrências.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.OcorrenciasController.GetById(System.Int32)">
+            <summary>
+            Busca uma ocorrência pelo ID.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.OcorrenciasController.GetPorRegiao(System.Int32)">
+            <summary>
+            Lista ocorrências por região.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.OcorrenciasController.Post(SentinelEye.DTOs.OcorrenciaDTO.CriacaoOcorrenciaDto)">
+            <summary>
+            Cadastra uma nova ocorrência.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.OcorrenciasController.Put(System.Int32,SentinelEye.DTOs.OcorrenciaDTO.AtualizacaoOcorrenciaDto)">
+            <summary>
+            Atualiza uma ocorrência.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.OcorrenciasController.Delete(System.Int32)">
+            <summary>
+            Remove uma ocorrência.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.RegioesController.Get">
+            <summary>
+            Lista todas as regiões cadastradas.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.RegioesController.GetById(System.Int32)">
+            <summary>
+            Busca uma região pelo ID.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.RegioesController.Post(SentinelEye.DTOs.RegiaoDTO.CriacaoRegiaoDto)">
+            <summary>
+            Cadastra uma nova região.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.RegioesController.Put(System.Int32,SentinelEye.DTOs.RegiaoDTO.AtualizacaoRegiaoDto)">
+            <summary>
+            Atualiza uma região existente.
+            </summary>
+        </member>
+        <member name="M:SentinelEye.Controllers.RegioesController.Delete(System.Int32)">
+            <summary>
+            Remove uma região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.AtualizacaoAgenteDto.Nome">
+            <summary>
+            Nome do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.AtualizacaoAgenteDto.Email">
+            <summary>
+            Email do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.AtualizacaoAgenteDto.Cargo">
+            <summary>
+            Cargo do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.AtualizacaoAgenteDto.RegiaoId">
+            <summary>
+            Região relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.CriacaoAgenteDto.Nome">
+            <summary>
+            Nome do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.CriacaoAgenteDto.Email">
+            <summary>
+            Email do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.CriacaoAgenteDto.Cargo">
+            <summary>
+            Cargo do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.CriacaoAgenteDto.RegiaoId">
+            <summary>
+            Região relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.LeituraAgenteDto.Id">
+            <summary>
+            Identificador do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.LeituraAgenteDto.Nome">
+            <summary>
+            Nome do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.LeituraAgenteDto.Email">
+            <summary>
+            Email do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.LeituraAgenteDto.Cargo">
+            <summary>
+            Cargo do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AgenteDTO.LeituraAgenteDto.Regiao">
+            <summary>
+            Nome da região relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.AtualizacaoAlertaDto.Tipo">
+            <summary>
+            Tipo do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.AtualizacaoAlertaDto.NivelRisco">
+            <summary>
+            Nível de risco do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.AtualizacaoAlertaDto.Descricao">
+            <summary>
+            Descrição do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.AtualizacaoAlertaDto.DataEmissao">
+            <summary>
+            Data de emissão do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.AtualizacaoAlertaDto.OcorrenciaId">
+            <summary>
+            Ocorrência relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.CriacaoAlertaDto.Tipo">
+            <summary>
+            Tipo do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.CriacaoAlertaDto.NivelRisco">
+            <summary>
+            Nível de risco do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.CriacaoAlertaDto.Descricao">
+            <summary>
+            Descrição do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.CriacaoAlertaDto.DataEmissao">
+            <summary>
+            Data de emissão do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.CriacaoAlertaDto.OcorrenciaId">
+            <summary>
+            Ocorrência relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.LeituraAlertaDto.Id">
+            <summary>
+            Identificador do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.LeituraAlertaDto.Tipo">
+            <summary>
+            Tipo do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.LeituraAlertaDto.NivelRisco">
+            <summary>
+            Nível de risco do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.LeituraAlertaDto.Descricao">
+            <summary>
+            Descrição do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.LeituraAlertaDto.DataEmissao">
+            <summary>
+            Data de emissão do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.AlertaDTO.LeituraAlertaDto.Ocorrencia">
+            <summary>
+            Tipo da ocorrência relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.AtualizacaoImagemDto.UrlImagem">
+            <summary>
+            URL da imagem satélite.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.AtualizacaoImagemDto.Fonte">
+            <summary>
+            Fonte da imagem.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.AtualizacaoImagemDto.DataCaptura">
+            <summary>
+            Data da captura.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.AtualizacaoImagemDto.OcorrenciaId">
+            <summary>
+            Ocorrência relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.CriacaoImagemDto.UrlImagem">
+            <summary>
+            URL da imagem satélite.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.CriacaoImagemDto.Fonte">
+            <summary>
+            Fonte da imagem.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.CriacaoImagemDto.DataCaptura">
+            <summary>
+            Data da captura.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.CriacaoImagemDto.OcorrenciaId">
+            <summary>
+            Ocorrência relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.LeituraImagemDto.Id">
+            <summary>
+            Identificador da imagem.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.LeituraImagemDto.UrlImagem">
+            <summary>
+            URL da imagem satélite.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.LeituraImagemDto.Fonte">
+            <summary>
+            Fonte da imagem.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.LeituraImagemDto.DataCaptura">
+            <summary>
+            Data da captura.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.ImagemSateliteDTO.LeituraImagemDto.Ocorrencia">
+            <summary>
+            Tipo da ocorrência relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.AtualizacaoOcorrenciaDto.Tipo">
+            <summary>
+            Tipo da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.AtualizacaoOcorrenciaDto.Descricao">
+            <summary>
+            Descrição da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.AtualizacaoOcorrenciaDto.DataOcorrencia">
+            <summary>
+            Data da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.AtualizacaoOcorrenciaDto.RegiaoId">
+            <summary>
+            Região relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.CriacaoOcorrenciaDto.Tipo">
+            <summary>
+            Tipo da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.CriacaoOcorrenciaDto.Descricao">
+            <summary>
+            Descrição da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.CriacaoOcorrenciaDto.DataOcorrencia">
+            <summary>
+            Data da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.CriacaoOcorrenciaDto.RegiaoId">
+            <summary>
+            Região relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.LeituraOcorrenciaDto.Id">
+            <summary>
+            Identificador da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.LeituraOcorrenciaDto.Tipo">
+            <summary>
+            Tipo da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.LeituraOcorrenciaDto.Descricao">
+            <summary>
+            Descrição da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.LeituraOcorrenciaDto.DataOcorrencia">
+            <summary>
+            Data da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.OcorrenciaDTO.LeituraOcorrenciaDto.Regiao">
+            <summary>
+            Nome da região relacionada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.AtualizacaoRegiaoDto.Nome">
+            <summary>
+            Nome da região monitorada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.AtualizacaoRegiaoDto.Pais">
+            <summary>
+            País da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.AtualizacaoRegiaoDto.NivelRisco">
+            <summary>
+            Nível de risco atual.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.CriacaoRegiaoDto.Nome">
+            <summary>
+            Nome da região monitorada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.CriacaoRegiaoDto.Pais">
+            <summary>
+            País da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.CriacaoRegiaoDto.NivelRisco">
+            <summary>
+            Nível de risco atual.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.LeituraRegiaoDto.Id">
+            <summary>
+            Identificador da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.LeituraRegiaoDto.Nome">
+            <summary>
+            Nome da região monitorada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.LeituraRegiaoDto.Pais">
+            <summary>
+            País da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.DTOs.RegiaoDTO.LeituraRegiaoDto.NivelRisco">
+            <summary>
+            Nível de risco atual.
+            </summary>
+        </member>
+        <member name="T:SentinelEye.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:SentinelEye.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SentinelEye.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SentinelEye.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SentinelEye.Models.Agente">
+            <summary>
+            Representa um agente responsável pelo monitoramento.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Agente.Id">
+            <summary>
+            Identificador único do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Agente.Nome">
+            <summary>
+            Nome do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Agente.Email">
+            <summary>
+            Email do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Agente.Cargo">
+            <summary>
+            Cargo do agente.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Agente.RegiaoId">
+            <summary>
+            Chave estrangeira da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Agente.Regiao">
+            <summary>
+            Região relacionada ao agente.
+            </summary>
+        </member>
+        <member name="T:SentinelEye.Models.Alerta">
+            <summary>
+            Representa um alerta gerado pelo sistema.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Alerta.Id">
+            <summary>
+            Identificador único do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Alerta.Tipo">
+            <summary>
+            Tipo do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Alerta.NivelRisco">
+            <summary>
+            Nível de risco do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Alerta.Descricao">
+            <summary>
+            Descrição do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Alerta.DataEmissao">
+            <summary>
+            Data de emissão do alerta.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Alerta.OcorrenciaId">
+            <summary>
+            Chave estrangeira da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Alerta.Ocorrencia">
+            <summary>
+            Ocorrência relacionada ao alerta.
+            </summary>
+        </member>
+        <member name="T:SentinelEye.Models.ImagemSatelite">
+            <summary>
+            Representa uma imagem de satélite associada a uma ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.ImagemSatelite.Id">
+            <summary>
+            Identificador único da imagem.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.ImagemSatelite.UrlImagem">
+            <summary>
+            URL da imagem.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.ImagemSatelite.Fonte">
+            <summary>
+            Fonte da imagem.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.ImagemSatelite.DataCaptura">
+            <summary>
+            Data da captura da imagem.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.ImagemSatelite.OcorrenciaId">
+            <summary>
+            Chave estrangeira da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.ImagemSatelite.Ocorrencia">
+            <summary>
+            Ocorrência relacionada à imagem.
+            </summary>
+        </member>
+        <member name="T:SentinelEye.Models.Ocorrencia">
+            <summary>
+            Representa uma ocorrência detectada pelo sistema.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.Id">
+            <summary>
+            Identificador único da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.Tipo">
+            <summary>
+            Tipo da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.Descricao">
+            <summary>
+            Descrição detalhada da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.DataOcorrencia">
+            <summary>
+            Data da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.Latitude">
+            <summary>
+            Latitude da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.Longitude">
+            <summary>
+            Longitude da ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.RegiaoId">
+            <summary>
+            Chave estrangeira da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.Regiao">
+            <summary>
+            Região relacionada à ocorrência.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.Alertas">
+            <summary>
+            Lista de alertas relacionados.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Ocorrencia.Imagens">
+            <summary>
+            Lista de imagens da ocorrência.
+            </summary>
+        </member>
+        <member name="T:SentinelEye.Models.Regiao">
+            <summary>
+            Representa uma região monitorada pelo sistema.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Regiao.Id">
+            <summary>
+            Identificador único da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Regiao.Nome">
+            <summary>
+            Nome da região monitorada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Regiao.Pais">
+            <summary>
+            País da região monitorada.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Regiao.NivelRisco">
+            <summary>
+            Nível de risco da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Regiao.Ocorrencias">
+            <summary>
+            Lista de ocorrências da região.
+            </summary>
+        </member>
+        <member name="P:SentinelEye.Models.Regiao.Agentes">
+            <summary>
+            Lista de agentes responsáveis pela região.
+            </summary>
+        </member>
+    </members>
+</doc>

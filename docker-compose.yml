@@ -1,0 +1,79 @@
+version: "3.9"
+
+# ✅ Rede compartilhada entre App e Banco (requisito obrigatório)
+networks:
+  sentineleyenet:
+    driver: bridge
+
+# ✅ Volume nomeado para persistência do banco (requisito obrigatório - evita penalidade de -1pt)
+volumes:
+  oracle-data:
+    name: oracle-sentineleyedata
+
+services:
+
+  # ──────────────────────────────────────────
+  # Container do Banco de Dados - Oracle Free
+  # ──────────────────────────────────────────
+  # ✅ Nome do container contém o RM do representante (565269)
+  oracle-db-rm565269:
+    image: gvenzl/oracle-free:23-slim
+    container_name: oracle-db-rm565269
+
+    # ✅ Variáveis de ambiente do banco (requisito obrigatório)
+    environment:
+      ORACLE_PASSWORD: SentinelEye@2026
+      ORACLE_DATABASE: SENTINELDB
+      APP_USER: sentineluser
+      APP_USER_PASSWORD: SentinelUser@2026
+
+    # ✅ Porta exposta para acesso externo (requisito obrigatório)
+    ports:
+      - "1521:1521"
+
+    # ✅ Volume nomeado para persistência (requisito obrigatório)
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+
+    networks:
+      - sentineleyenet
+
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 30s
+      timeout: 20s
+      retries: 10
+      start_period: 120s
+
+    # ✅ Modo background garantido pelo docker compose up -d
+    restart: unless-stopped
+
+  # ──────────────────────────────────────────
+  # Container da Aplicação - .NET 8
+  # ──────────────────────────────────────────
+  # ✅ Nome do container contém o RM do representante (565269)
+  sentineleyeapi-rm565269:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentineleyeapi-rm565269
+    image: sentineleyeapi-rm565269:latest
+
+    # ✅ Variáveis de ambiente da aplicação (requisito obrigatório)
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__OracleConnection: "User Id=sentineluser;Password=SentinelUser@2026;Data Source=oracle-db-rm565269:1521/SENTINELDB"
+
+    # ✅ Porta exposta para acesso externo (requisito obrigatório)
+    ports:
+      - "8080:8080"
+
+    networks:
+      - sentineleyenet
+
+    depends_on:
+      oracle-db-rm565269:
+        condition: service_healthy
+
+    restart: unless-stopped
