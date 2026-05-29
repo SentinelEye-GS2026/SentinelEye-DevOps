@@ -27,29 +27,8 @@ O **SentinelEye** é uma solução de monitoramento orbital para combate a ativi
 
 ## 🏗️ Arquitetura Macro da Solução em Nuvem
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        AZURE CLOUD (VM)                         │
-│                                                                 │
-│   ┌─────────────┐    Docker Network: sentineleyenet             │
-│   │   USUÁRIO   │                                               │
-│   │  (Browser/  │                                               │
-│   │  Swagger)   │                                               │
-│   └──────┬──────┘                                               │
-│          │ HTTP :8080                                            │
-│          ▼                                                       │
-│   ┌─────────────────────────┐     ┌─────────────────────────┐  │
-│   │  Container App (.NET 8) │────▶│  Container Oracle Free  │  │
-│   │  sentineleyeapi-rm565269│     │  oracle-db-rm565269     │  │
-│   │  Porta: 8080            │     │  Porta: 1521            │  │
-│   │  User: appuser (não-root│     │  Volume: oracle-data    │  │
-│   │  WORKDIR: /app          │     │  (persistência)         │  │
-│   └─────────────────────────┘     └─────────────────────────┘  │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+<img width="976" height="681" alt="Arquitetura Macro da Solução em Nuvem — SentinelEye" src="https://github.com/user-attachments/assets/ae1d1ced-c645-4892-8152-e6663a128dcc" />
 
-> Diagrama detalhado disponível no arquivo `architecture.png` na raiz do repositório.
 
 ---
 
